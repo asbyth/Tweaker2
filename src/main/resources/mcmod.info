@@ -1,0 +1,18 @@
+[
+  {
+    "modid": "tweaker_mod",
+    "name": "Tweaker",
+    "description": ":crab: mc bugs are gone :crab:",
+    "version": "2.2",
+    "mcversion": "${mcversion}",
+    "url": "https://github.com/asbyth",
+    "updateUrl": "",
+    "authorList": [
+      "asbyth"
+    ],
+    "credits": "prplz, h1nk",
+    "logoFile": "",
+    "screenshots": [],
+    "dependencies": []
+  }
+]

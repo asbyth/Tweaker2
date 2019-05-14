@@ -1,0 +1,24 @@
+{
+  "refmap": "mixins.tweaker.refmap.json",
+  "verbose": true,
+  "compatibilityLevel": "JAVA_8",
+  "package": "net.asbyth.tweaker.mixins",
+  "mixins":
+  [
+    "client.MixinMinecraft",
+    "client.gui.MixinGuiGameOver",
+    "client.renderer.entity.MixinRenderPlayer",
+    "world.MixinWorld",
+    "world.chunk.MixinChunk",
+    "entity.MixinEntity",
+    "entity.MixinEntityLivingBase",
+    "scoreboard.MixinScoreboard",
+    "network.play.server.MixinS2EPacketCloseWindow",
+    "util.MixinScreenshotHelper",
+    "client.entity.MixinEntityPlayerSP",
+    "client.gui.inventory.IMixinGuiContainer",
+    "client.renderer.IMixinInventoryEffectRenderer",
+    "client.renderer.MixinInventoryEffectRenderer",
+    "client.renderer.MixinEntityRenderer"
+  ]
+}
