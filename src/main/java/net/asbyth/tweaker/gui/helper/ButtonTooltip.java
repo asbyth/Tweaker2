@@ -98,11 +98,10 @@ public abstract class ButtonTooltip extends GuiScreen {
 
         int outerAlpha = 0x505000FF;
         int outerAlpha2 = (outerAlpha & 0xFEFEFE) >> 1 | outerAlpha & -0x1000000;
-        drawGradientRect(tooltipX, tooltipY + 1, tooltipX + 1, tooltipY + tooltipHeight + 6 - 1, outerAlpha, outerAlpha2);
-        drawGradientRect(tooltipX + tooltipWidth + 5, tooltipY + 1, tooltipX + tooltipWidth + 7, tooltipY + tooltipHeight + 6 - 1, outerAlpha, outerAlpha2);
-        drawGradientRect(tooltipX, tooltipY, tooltipX + tooltipWidth + 3, tooltipY + 1, outerAlpha, outerAlpha);
-        drawGradientRect(tooltipX, tooltipY + tooltipHeight + 5, tooltipX + tooltipWidth + 7, tooltipY + tooltipHeight + 6, outerAlpha2, outerAlpha2);
-
+        drawGradientRect(tooltipX, tooltipY + 1, tooltipX + 1, tooltipY + tooltipHeight + 6 - 1, outerAlpha, outerAlpha2); // left
+        drawGradientRect(tooltipX + tooltipWidth + 5, tooltipY + 1, tooltipX + tooltipWidth + 6, tooltipY + tooltipHeight + 6 - 1, outerAlpha, outerAlpha2); // right
+        drawGradientRect(tooltipX, tooltipY, tooltipX + tooltipWidth + 6, tooltipY + 1, outerAlpha, outerAlpha); // top
+        drawGradientRect(tooltipX, tooltipY + tooltipHeight + 5, tooltipX + tooltipWidth + 7, tooltipY + tooltipHeight + 6, outerAlpha2, outerAlpha2); // bottom
         int lineCount = 0;
 
         for (String s : tooltipArray) {
