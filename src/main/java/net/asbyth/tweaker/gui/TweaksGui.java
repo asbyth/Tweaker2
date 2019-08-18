@@ -1,5 +1,6 @@
 package net.asbyth.tweaker.gui;
 
+import net.asbyth.tweaker.Tweaker;
 import net.asbyth.tweaker.config.Settings;
 import net.asbyth.tweaker.gui.helper.AbstractButton;
 import net.asbyth.tweaker.gui.helper.AbstractGui;
@@ -9,19 +10,38 @@ public class TweaksGui extends AbstractGui {
 
     @Override
     public void initGui() {
-        buttonList.add(new AbstractButton(0, getCenter() - 155, getRowPos(1), 150, 20, getSuffix(Settings.NAUSEAEFFECT, "Nausea Effect")));
-        buttonList.add(new AbstractButton(1, getCenter() + 5, getRowPos(1), 150, 20, getSuffix(Settings.RESPAWNBUTTON, "Respawn Button")));
-        buttonList.add(new AbstractButton(2, getCenter() - 155, getRowPos(2), 150, 20, getSuffix(Settings.ARMPOSITION, "Arm Position")));
-        buttonList.add(new AbstractButton(3, getCenter() + 5, getRowPos(2), 150, 20, getSuffix(Settings.INSTANTWORLDSWITCHING, "Instant World Switching")));
-        buttonList.add(new AbstractButton(4, getCenter() + 5, getRowPos(3), 150, 20, getSuffix(Settings.WINDOWEDFULLSCREEN, "Windowed Fullscreen")));
-        buttonList.add(new AbstractButton(5, getCenter() - 155, getRowPos(3), 150, 20, getSuffix(Settings.MOUSEDELAYFIX, "Mouse Delay Fix")));
-        buttonList.add(new AbstractButton(6, getCenter() + 5, getRowPos(4), 150, 20, getSuffix(Settings.NOCLOSEMYCHAT, "NoCloseMyChat")));
-        buttonList.add(new AbstractButton(7, getCenter() - 155, getRowPos(4), 150, 20, getSuffix(Settings.SCOREBOARDCRASH, "Scoreboard Crash")));
-        buttonList.add(new AbstractButton(8, getCenter() + 5, getRowPos(5), 150, 20, getSuffix(Settings.ASYNCSCREENSHOTS, "Async Screenshots")));
-        buttonList.add(new AbstractButton(9, getCenter() - 155, getRowPos(5), 150, 20, getSuffix(Settings.FULLBRIGHT, "Fullbright")));
-        buttonList.add(new AbstractButton(10, getCenter() - 155, getRowPos(6), 150, 20, getSuffix(Settings.INVENTORYPOTIONPOSITION, "Potion Effect Position")));
-        buttonList.add(new AbstractButton(11, getCenter() + 5, getRowPos(6), 150, 20, getSuffix(Settings.VOIDFLICKERFIX, "Void Flicker Fix")));
-        buttonList.add(new AbstractButton(12, getCenter() - 155, getRowPos(7), 150, 20, getSuffix(Settings.RAYTRACEBLOCKS, "Raytrace Blocks")));
+        buttonList.add(new AbstractButton(0, getCenter() - 155, getRowPos(1), 150, 20,
+                getSuffix(Settings.NAUSEAEFFECT, "Nausea Effect")));
+        buttonList.add(new AbstractButton(1, getCenter() + 5, getRowPos(1), 150, 20,
+                getSuffix(Settings.RESPAWNBUTTON, "Respawn Button")));
+
+        buttonList.add(new AbstractButton(2, getCenter() - 155, getRowPos(2), 150, 20,
+                getSuffix(Settings.ARMPOSITION, "Arm Position")));
+        buttonList.add(new AbstractButton(3, getCenter() + 5, getRowPos(2), 150, 20,
+                getSuffix(Settings.INSTANTWORLDSWITCHING, "Instant World Switching")));
+
+        buttonList.add(new AbstractButton(4, getCenter() + 5, getRowPos(3), 150, 20,
+                getSuffix(Settings.WINDOWEDFULLSCREEN, "Windowed Fullscreen")));
+        buttonList.add(new AbstractButton(5, getCenter() - 155, getRowPos(3), 150, 20,
+                getSuffix(Settings.MOUSEDELAYFIX, "Mouse Delay Fix")));
+
+        buttonList.add(new AbstractButton(6, getCenter() + 5, getRowPos(4), 150, 20,
+                getSuffix(Settings.NOCLOSEMYCHAT, "NoCloseMyChat")));
+        buttonList.add(new AbstractButton(7, getCenter() - 155, getRowPos(4), 150, 20,
+                getSuffix(Settings.SCOREBOARDCRASH, "Scoreboard Crash")));
+
+        buttonList.add(new AbstractButton(8, getCenter() + 5, getRowPos(5), 150, 20,
+                getSuffix(Settings.ASYNCSCREENSHOTS, "Async Screenshots")));
+        buttonList.add(new AbstractButton(9, getCenter() - 155, getRowPos(5), 150, 20,
+                getSuffix(Settings.FULLBRIGHT, "Fullbright")));
+
+        buttonList.add(new AbstractButton(10, getCenter() - 155, getRowPos(6), 150, 20,
+                getSuffix(Settings.INVENTORYPOTIONPOSITION, "Potion Effect Position")));
+        buttonList.add(new AbstractButton(11, getCenter() + 5, getRowPos(6), 150, 20,
+                getSuffix(Settings.VOIDFLICKERFIX, "Void Flicker Fix")));
+
+        buttonList.add(new AbstractButton(12, getCenter() - 155, getRowPos(7), 150, 20,
+                getSuffix(Settings.RAYTRACEBLOCKS, "Raytrace Blocks")));
     }
 
     @Override
@@ -29,7 +49,7 @@ public class TweaksGui extends AbstractGui {
         drawDefaultBackground();
         super.drawScreen(mouseX, mouseY, partialTicks);
 
-        drawCenteredString(fontRendererObj, "Tweaker (2.0)", getCenter(), getRowPos(0), 16777215);
+        drawCenteredString(fontRendererObj, "Tweaker (" + Tweaker.VERSION + ")", getCenter(), getRowPos(0), 16777215);
     }
 
     @Override

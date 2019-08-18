@@ -1,8 +1,9 @@
 package net.asbyth.tweaker.command;
 
-import net.asbyth.tweaker.Tweaker;
+import net.asbyth.tweaker.gui.TweaksGui;
+import net.asbyth.tweaker.util.TickScheduler;
+import net.minecraft.client.Minecraft;
 import net.minecraft.command.CommandBase;
-import net.minecraft.command.CommandException;
 import net.minecraft.command.ICommandSender;
 
 public class TweakerCommand extends CommandBase {
@@ -17,8 +18,8 @@ public class TweakerCommand extends CommandBase {
     }
 
     @Override
-    public void processCommand(ICommandSender sender, String[] args) throws CommandException {
-        Tweaker.INSTANCE.gui();
+    public void processCommand(ICommandSender sender, String[] args) {
+        TickScheduler.INSTANCE.schedule(0, () -> Minecraft.getMinecraft().displayGuiScreen(new TweaksGui()));
     }
 
     @Override

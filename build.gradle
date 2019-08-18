@@ -42,6 +42,7 @@ minecraft {
     version = project.forgeVersion
     runDir = "run"
     mappings = project.mcpVersion
+    makeObfSourceJar = false
 }
 
 reobf {
